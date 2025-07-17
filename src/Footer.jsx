@@ -4,7 +4,7 @@ function Footer(){
         <footer>
             <div className="footer-content">
                 <h3>NEXA</h3>
-                <p>Smart, reliable, and built to empower your Discord server. Nexa is currently in beta — stay tuned for launch updates.</p>
+                <p>Smart, reliable, and built to empower your Discord server. Nexa is currently in beta - stay tuned for launch updates.</p>
             </div>
             <div>
                 <div className="footerlinks">
