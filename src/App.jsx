@@ -5,16 +5,9 @@ import './index.scss';
 import Features from './Features.jsx';
 import { ShieldCheck, Smile, PlugZap, Settings, BarChart3 } from 'lucide-react';
 import Dashboard from './Dashboard.jsx';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
 import About from './About.jsx';
 
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
-);
 
 function App() {
   return(

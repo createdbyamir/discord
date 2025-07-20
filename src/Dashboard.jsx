@@ -8,7 +8,6 @@ function Dashboard() {
         <div className="dashboard">
             <Welcome />
             <Stats />
-            <QuickActions />
         </div>
     );
 }
