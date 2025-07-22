@@ -12,8 +12,8 @@ import About from './About.jsx';
 function App() {
   return(
     <>
+      <Header/> 
       <div className="purple">
-        <Header/>
         <Introduction/>
       </div>
       <div className="features-section">

@@ -8,7 +8,7 @@ $bg-color: #f0f2ff;
 $card-bg: #fff;
 $button-bg: $primary-color;
 $button-hover-bg: darken($primary-color, 10%);
-$button-text-color: #fff;  // <-- Add this line
+$button-text-color: #fff;
 $border-radius: 12px;
 $spacing: 1.6rem;
 $font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -17,8 +17,7 @@ $font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 // Reset & basics
 *,
 *::before,
-*::after {
-  box-sizing: border-box;
+*::after { box-sizing: border-box;
 }
 
 body {
@@ -49,12 +48,31 @@ a {
 
 // Header
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1080px;
-  margin: 0 auto 3rem;
-  padding: 0 1rem;
+  padding: 0.5rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  transition: background-color 0.3s ease;
+  background: linear-gradient(135deg, #5a5edd, #837cfb);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  
+
+  &.scrolled {
+    border-radius: 0px 0px 20px 20px;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+
+  .toggle {
+    display: none;
+  }
 
   .logo img {
     width: 120px;
@@ -81,6 +99,16 @@ header {
           color: white;
         }
       }
+    }
+  }
+
+  @media ( max-width: 990px )
+  {
+    .toggle { 
+      display: block;
+    }
+    nav { 
+      display: none; 
     }
   }
 
@@ -341,6 +369,7 @@ footer {
   color: #c9c9e8;
   padding: 3rem 2rem;
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   justify-content: space-between;
   max-width: 1080px;
